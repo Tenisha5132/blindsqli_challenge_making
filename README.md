@@ -12,3 +12,9 @@ refer as much and do your best
 the writeups hould be like that as a beginner coulf also understand
 
 REMEMBER:   DON'T GIVE UP!!!!!
+
+
+
+07-02-2025
+trying some php scripts related to my before blind sqli challenge 
+i slept off i didn't woke up sorry
