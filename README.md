@@ -18,3 +18,7 @@ REMEMBER:   DON'T GIVE UP!!!!!
 07-02-2025
 trying some php scripts related to my before blind sqli challenge 
 i slept off i didn't woke up sorry
+08-02-2025
+made a php script which you guys may find similer to lords of sqli code
+i took refernce from it then with my before php i made a new one
+now i have to make a sample python script to test 
