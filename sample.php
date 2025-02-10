@@ -20,9 +20,10 @@ echo "<!DOCTYPE html>
 <body>
         <h1>SQL INJECTION CHALLENGE</h1>
         <div>
-                <p><strong>Disallowed characters:</strong> the following characters are not allowed: <strong>_>
-                <p><strong>Disallowed keywords:</strong> the following keywords are not allowed: <strong>or, a>
-                <p><strong>Objective:</strong> YOUR GOAL IS TO BYPASS THE LOGIN AS THE <strong>admin</strong> >
+                <p><strong>DISALLOWED CHARACTERS:</strong> the following characters are not allowed: <strong>_ .( )</strong></p>
+                <p><strong>DISALLOWED KEYWORDS:</strong> the following keywords are not allowed: <strong>or, and, substring</strong></p>
+                <p><strong>ONE MORE CONDITION</strong>: the query is only able to take the url encoding in it so use the url encodings of the charcters like: & => %26, = => %3Dand so on...(you can can ge>
+                <p><strong>TO COMPLETE:</strong> BYPASS THE LOGIN AS THE <strong>admin by getting it's password</strong> user</p>
         </div>";
 
 if (isset($_GET['pw'])) {
@@ -41,12 +42,11 @@ if (isset($_GET['pw'])) {
                 echo "<h2>Hello {$result['id']}</h2>";
         }
 
-        $_GET['pw'] = addslashes($_GET['pw']);
-        $query = "select pw from users where id='admin' and pw='{$_GET['pw']}'";
+        $query = "select * from users where id='admin' and pw='{$_GET['pw']}'";
         $result = @mysqli_fetch_array(mysqli_query($db, $query));
 
         if (($result['pw']) && ($result['pw'] == $_GET['pw']))   {
-                echo "<h2>CHALLENGE CLEARED!! Hello admin garu!!</h2>";
+                echo "<h2>CHALLENGE CLEARED!! Hello admin !!</h2>";
         }
 
 } else {
