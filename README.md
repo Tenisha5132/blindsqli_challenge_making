@@ -28,3 +28,9 @@ but the thing is that http://localhost/sqli_challenge/index.php?pw=%27%20%7C%7C%
 for this it is giving the boolean thingy but if i type
 http://localhost/sqli_challenge/index.php?pw=' || id='admin' && substr(pw,1,1)='d'#
 i am not getting hello admin
+10-02-2025
+when i checked and read about why it is not coming the probable reason is that the they of database i am using does support to this so i guess using the url encoding directly is better
+for this i just kept another check condition
+the php script and the python script is done
+ig
+i have to still look in some other ways
